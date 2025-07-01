@@ -14,6 +14,7 @@ using Dalamud.Game.Text.SeStringHandling;
 using Dalamud.Game.Text.SeStringHandling.Payloads;
 using FFXIVClientStructs.FFXIV.Component.GUI;
 using System.Reflection.Metadata;
+using Dalamud.Interface;
 
 namespace DutyPusher
 {
@@ -303,10 +304,13 @@ namespace DutyPusher
             if (dtrEntry == null) return;
             try
             {
-                dtrEntry.Text = $"{Plugin.loc.GetString("PluginName")}: " +
-                                (Configuration.Enable ?
-                                 Plugin.loc.GetString("On") :
-                                 Plugin.loc.GetString("Off"));
+                if (Configuration.Enable) {
+                    dtrEntry.Text = $"{SeIconChar.Circle.ToIconString()}" + $"{Plugin.loc.GetString("PluginName")}: " + Plugin.loc.GetString("On");
+                }
+                else
+                {
+                    dtrEntry.Text = $"{SeIconChar.Prohibited.ToIconString()}" + $"{Plugin.loc.GetString("PluginName")}: " + Plugin.loc.GetString("Off");
+                }
                 pluginLog.Debug("DTR bar Updated");
             }
             catch (Exception ex)
