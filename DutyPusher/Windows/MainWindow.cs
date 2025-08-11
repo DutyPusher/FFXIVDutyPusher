@@ -3,7 +3,7 @@ using System.Numerics;
 using Dalamud.Interface.Windowing;
 using Dalamud.Loc;
 using DutyPusher.Services;
-using ImGuiNET;
+using Dalamud.Bindings.ImGui;
 
 namespace DutyPusher.Windows;
 

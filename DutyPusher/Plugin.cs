@@ -157,6 +157,7 @@ namespace DutyPusher
             var languageLoad = loc.GetString("LocalizationLoading");
             pluginLog.Info(languageLoad);
 
+            
             pushService = new PushService(Configuration, pluginLog);
 
             dutyListener = new DutyListener( () => Configuration.Enable,pluginLog, loc, clientState, pushService);
@@ -277,7 +278,7 @@ namespace DutyPusher
             try
             {
                 dtrEntry ??= DtrBar.Get(dtrBarTitle);
-                dtrEntry.OnClick += () =>
+                dtrEntry.OnClick += (interactionEvent) =>
                 {
                     try
                     {
