@@ -265,7 +265,7 @@ namespace DutyPusher.Windows
                 }
                 catch (Exception ex)
                 {
-                    pluginLog.Error("Something wrong, please check your bot token or verify that you already sent a message to your bot");
+                    pluginLog.Error("Something wrong, please check your bot token or verify that you already sent a message to your bot, ", ex.ToString());
                 }
             }
         }
