@@ -1,7 +1,7 @@
 {
     "PluginName": "DutyPusher",
     "WelcomeLine": "Benvenuto in DutyPusher, leggi la guida prima dell'uso",
-    "GuideURL": "https://morcherlf.github.io/FFXIVDutyPusher/docs/",
+    "GuideURL": "https://dutypusher.github.io/FFXIVDutyPusher/docs/",
     "PushChannel": "Canale di notifica",
     "Bark": "Bark",
     "PushDeer": "PushDeer",
