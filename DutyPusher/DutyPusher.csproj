@@ -2,9 +2,9 @@
 <Project Sdk="Dalamud.NET.Sdk/14.0.1">
 
   <PropertyGroup>
-    <Version>0.1.4.4</Version>
+    <Version>0.1.4.5</Version>
     <Description>DutyPusher</Description>
-    <PackageProjectUrl>https://github.com/MorCherlf/FFXIVDutyPusher</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/DutyPusher/FFXIVDutyPusher</PackageProjectUrl>
     <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
     <IsPackable>false</IsPackable>
     <TargetFramework>net10.0-windows7.0</TargetFramework>

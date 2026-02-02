@@ -1,7 +1,7 @@
 {
     "PluginName": "DutyPusher",
     "WelcomeLine": "Welcome to use the DutyPusher, please read the guide before using",
-    "GuideURL": "https://morcherlf.github.io/FFXIVDutyPusher/docs/",
+    "GuideURL": "https://dutypusher.github.io/FFXIVDutyPusher/docs/",
     "PushChannel": "Push Channel",
     "Bark": "Bark",
     "PushDeer": "PushDeer",
