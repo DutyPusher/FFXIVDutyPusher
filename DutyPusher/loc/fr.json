@@ -32,5 +32,7 @@
     "ntfy.topic": "Sujet",
     "ntfy.priority": "Priorité",
     "ntfy.priority.descript": "Veuillez saisir un nombre de 1 à 5 (la valeur par défaut est 3)",
-    "ntfy.emoji": "Pour un peu de fun (envoie un Emoji aléatoire avec les notifications)"
+    "ntfy.emoji": "Pour un peu de fun (envoie un Emoji aléatoire avec les notifications)",
+    "ntfy.auth": "Authentification",
+    "ntfy.auth.descript": "Veuillez saisir la valeur encodée en Base64. Laissez ce champ vide si l’authentification n’est pas nécessaire."
 }

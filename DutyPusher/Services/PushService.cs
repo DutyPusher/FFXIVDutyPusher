@@ -37,7 +37,7 @@ namespace DutyPusher.Services
                 ["Bark"] = new BarkChannel(configuration.BarkServer, configuration.BarkTimeSensitive),
                 ["PushDeer"] = new PushDeerChannel(configuration.PushDeerKey),
                 ["Telegram_Official_API"] = new TelegramChannel(configuration.TelegramBotToken, configuration.TelegramChatID),
-                ["Ntfy"] = new NtfyChannel(configuration.NtfyServer, configuration.NtfyTopic, configuration.NtfyPriority, configuration.NtfyEmoji)
+                ["Ntfy"] = new NtfyChannel(configuration.NtfyServer, configuration.NtfyTopic, configuration.NtfyPriority, configuration.NtfyEmoji, configuration.NtfyAuth)
             };
 
             // 检查配置的 PushChannel 是否存在，防止 KeyNotFound 异常

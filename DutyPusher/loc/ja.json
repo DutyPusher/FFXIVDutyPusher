@@ -32,5 +32,7 @@
     "ntfy.topic": "トピック",
     "ntfy.priority": "優先度",
     "ntfy.priority.descript": "1～5の数字を入力してください（デフォルトは3です）",
-    "ntfy.emoji": "お楽しみに（通知時にランダムな絵文字を送信します）"
+    "ntfy.emoji": "お楽しみに（通知時にランダムな絵文字を送信します）",
+    "ntfy.auth": "認証",
+    "ntfy.auth.descript": "base-64でエンコードされた値を入力してください。必要ない場合は無視してください。"
 }

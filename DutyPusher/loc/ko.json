@@ -32,5 +32,7 @@
     "ntfy.topic": "주제",
     "ntfy.priority": "우선 순위",
     "ntfy.priority.descript": "1-5 사이의 숫자를 입력하십시오 (기본값은 3임)",
-    "ntfy.emoji": "재미를 위해 (알림 시 임의의 이모티콘 전송)"
+    "ntfy.emoji": "재미를 위해 (알림 시 임의의 이모티콘 전송)",
+    "ntfy.auth": "인증",
+    "ntfy.auth.descript": "base-64로 인코딩된 값을 입력하십시오. 필요하지 않은 경우 무시하십시오."
 }

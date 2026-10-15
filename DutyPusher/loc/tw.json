@@ -32,5 +32,7 @@
     "ntfy.topic": "主題",
     "ntfy.priority": "優先級",
     "ntfy.priority.descript": "請輸入1-5的數字（預設為3）",
-    "ntfy.emoji": "找點樂子（通知時隨機傳送Emoji）"
+    "ntfy.emoji": "找點樂子（通知時隨機傳送Emoji）",
+    "ntfy.auth": "驗證",
+    "ntfy.auth.descript": "請輸入base-64編碼的值。若不需要請忽略。"
 }

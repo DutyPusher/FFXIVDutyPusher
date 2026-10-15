@@ -41,14 +41,16 @@ namespace DutyPusher.PushChannels
         private readonly string topic;
         private readonly int priority; // 3 = default, 4 = high priority, 5 = max
         private readonly bool emoji;
+        private readonly string auth;
 
-        public NtfyChannel(string server, string topic, int priority, bool emoji)
+        public NtfyChannel(string server, string topic, int priority, bool emoji, string auth)
         {
             httpClient = new HttpClient();
             this.server = server;
             this.topic = topic;
             this.priority = priority;
             this.emoji = emoji;
+            this.auth = auth;
         }
 
         public async Task SendAsync(string title, string content, IPluginLog pluginLog)
@@ -61,6 +63,10 @@ namespace DutyPusher.PushChannels
                 {
                     url = url + $"&tag={randomEmoji}";
                 }
+            }
+            if (!string.IsNullOrEmpty(auth))
+            {
+                url = url + $"&auth={auth}";
             }
             pluginLog.Debug(url);
             var response = await httpClient.GetAsync(url);
