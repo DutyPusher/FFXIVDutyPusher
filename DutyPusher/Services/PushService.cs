@@ -55,7 +55,8 @@ namespace DutyPusher.Services
 
         public async Task<bool> SendNotificationAsync(string title, string content)
         {
-            if (activeChannel == null)
+            var channel = activeChannel;
+            if (channel == null)
             {
                 pluginLog.Warning("No channel has been selected!");
                 return false;
@@ -63,7 +64,7 @@ namespace DutyPusher.Services
             using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
             try
             {
-                await activeChannel.SendAsync(title, content, pluginLog)
+                await channel.SendAsync(title, content, pluginLog)
                     .ConfigureAwait(false); // 避免同步上下文问题
                 return true;
             }
@@ -73,11 +74,16 @@ namespace DutyPusher.Services
             }
             catch (HttpRequestException ex)
             {
-                pluginLog.Error($"Network error: ({ex.StatusCode}): {ex.Message}");
+                // ntfy exception messages may contain the request URL, including auth and message text.
+                pluginLog.Error(channel is NtfyChannel
+                    ? $"Network error: ({ex.StatusCode})"
+                    : $"Network error: ({ex.StatusCode}): {ex.Message}");
             }
             catch (Exception ex)
             {
-                pluginLog.Error($"Failed: {ex.GetType().Name} - {ex.Message}");
+                pluginLog.Error(channel is NtfyChannel
+                    ? $"Failed: {ex.GetType().Name}"
+                    : $"Failed: {ex.GetType().Name} - {ex.Message}");
             }
             return false;
         }

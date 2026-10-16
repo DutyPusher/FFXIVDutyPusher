@@ -68,7 +68,7 @@ namespace DutyPusher.PushChannels
             {
                 url = url + $"&auth={auth}";
             }
-            pluginLog.Debug(url);
+            pluginLog.Debug("Sending ntfy notification.");
             var response = await httpClient.GetAsync(url);
             response.EnsureSuccessStatusCode();
         }
