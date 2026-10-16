@@ -32,5 +32,7 @@
     "ntfy.topic": "Topic",
     "ntfy.priority": "Priority",
     "ntfy.priority.descript": "Please enter a number from 1-5 (default is 3)",
-    "ntfy.emoji": "For a bit of fun (sends a random Emoji with notifications)"
+    "ntfy.emoji": "For a bit of fun (sends a random Emoji with notifications)",
+    "ntfy.auth": "Authentication",
+    "ntfy.auth.descript": "Please enter the base-64 encoded value. Ignore if not needed."
 }

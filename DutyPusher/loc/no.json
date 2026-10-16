@@ -32,5 +32,7 @@
     "ntfy.topic": "Emne",
     "ntfy.priority": "Prioritet",
     "ntfy.priority.descript": "Vennligst skriv inn et tall fra 1-5 (standard er 3)",
-    "ntfy.emoji": "For litt moro (sender en tilfeldig Emoji med varsler)"
+    "ntfy.emoji": "For litt moro (sender en tilfeldig Emoji med varsler)",
+    "ntfy.auth": "Autentisering",
+    "ntfy.auth.descript": "Vennligst skriv inn base-64-kodet verdi. Ignorer hvis det ikke er nødvendig."
 }

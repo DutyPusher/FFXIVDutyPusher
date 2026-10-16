@@ -32,5 +32,7 @@
     "ntfy.topic": "Argomento",
     "ntfy.priority": "Priorità",
     "ntfy.priority.descript": "Inserisci un numero da 1 a 5 (il valore predefinito è 3)",
-    "ntfy.emoji": "Per un po' di divertimento (invia un Emoji casuale con le notifiche)"
+    "ntfy.emoji": "Per un po' di divertimento (invia un Emoji casuale con le notifiche)",
+    "ntfy.auth": "Autenticazione",
+    "ntfy.auth.descript": "Inserisci il valore codificato in Base64. Ignora se non necessario."
 }

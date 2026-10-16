@@ -26,6 +26,8 @@ public class Configuration : IPluginConfiguration
     public bool NtfyEmoji { get; set; } = false; // Ntfy Emoji
     public int NtfyPriority { get; set; } = 3; // Ntfy Priority
 
+    public string NtfyAuth { get; set; } = ""; // Ntfy Auth Query
+
 
     public bool Enable { get; set; } = false; 
 

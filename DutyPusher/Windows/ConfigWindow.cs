@@ -33,6 +33,8 @@ namespace DutyPusher.Windows
         private int ntfyPriority = 3;
         private bool ntfyEmoji = false;
 
+        private string ntfyAuth = "";
+
         public ConfigWindow(Plugin plugin, PushService pushService, IPluginLog pluginLog, Localization loc) : base(loc.GetString("PluginName") +"###By MorCherlf")
         {
             Flags = ImGuiWindowFlags.NoCollapse;
@@ -55,6 +57,7 @@ namespace DutyPusher.Windows
             ntfyTopic = configuration.NtfyTopic;
             ntfyPriority = configuration.NtfyPriority;
             ntfyEmoji = configuration.NtfyEmoji;
+            ntfyAuth = configuration.NtfyAuth;
         }
 
         public void Dispose() { }
@@ -74,6 +77,7 @@ namespace DutyPusher.Windows
             ntfyTopic = configuration.NtfyTopic;
             ntfyPriority = configuration.NtfyPriority;
             ntfyEmoji = configuration.NtfyEmoji;
+            ntfyAuth = configuration.NtfyAuth;
         }
 
         public override void Draw()
@@ -203,6 +207,13 @@ namespace DutyPusher.Windows
                     ImGui.SameLine();
                     ImGui.Text(loc.GetString("ntfy.priority.descript"));
 
+                    ImGui.Text(loc.GetString("ntfy.auth"));
+                    ImGui.SameLine();
+                    ImGui.SetNextItemWidth(250);
+                    ImGui.InputText("##Your Auth", ref ntfyAuth, 256);
+                    ImGui.SameLine();
+                    ImGui.Text(loc.GetString("ntfy.auth.descript"));
+
                     ImGui.Checkbox(loc.GetString("ntfy.emoji"), ref ntfyEmoji);
                     ImGui.SameLine();
                     if (ImGui.Button(loc.GetString("Test")))
@@ -283,6 +294,7 @@ namespace DutyPusher.Windows
             configuration.NtfySelection  = selectedNtfy;
             configuration.NtfyServer = ntfyServer;
             configuration.NtfyTopic = ntfyTopic;
+            configuration.NtfyAuth = ntfyAuth;
             configuration.Enable = enable;
             configuration.Save();
         }
